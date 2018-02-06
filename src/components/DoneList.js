@@ -13,18 +13,20 @@ const DoneList = (props) => {
             className="list-group-item"
             key={done + 'key'}
           >
-            { done }
-            <button
-              className="btn btn-primary"
-              onClick={() => props.removeToDone(done)}
-            >
-              No Hecho
-            </button>
+            <div className="list-flex">
+              { done }
+              <button
+                className="btn btn-danger"
+                onClick={() => props.removeToDone(done)}
+              >
+                <i className="fas fa-times"></i>
+              </button>
+            </div>
           </li>
         ))
       }
       </ul>
-      <p>Tareas Realizadas {props.dones.length}</p>
+      <p>Tareas Realizadas <strong>{props.dones.length}</strong></p>
     </div>
   )
 }

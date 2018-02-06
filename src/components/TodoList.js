@@ -11,19 +11,21 @@ const TodoList = (props) => {
           props.todos.map((todo, i) => 
             <li 
               className="list-group-item"
-              
+              key={todo.descripction}
             >
-            { todo.descripction }
-            <button
-              className="btn btn-primary"
-              onClick={() => props.addToDone(todo.descripction)}
-            >
-              Hecho
-            </button>
+            <div className="list-flex">
+              { todo.descripction }
+              <button
+                className="btn btn-success"
+                onClick={() => props.addToDone(todo.descripction)}
+              >
+                <i className="fas fa-check"></i>
+              </button>
+            </div>
             </li> ) 
         }
       </ul>
-      <p className="text-center">Total de pendientes: {props.todos.length}</p>
+      <p className="text-center">Total de pendientes: <strong>{props.todos.length}</strong></p>
     </div>
   )
 }
