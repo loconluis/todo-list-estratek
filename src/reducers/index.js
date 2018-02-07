@@ -12,6 +12,11 @@ const todoReducer = (state = [], action) => {
     case 'REMOVE_DONE':
       todos = [...state, { 'descripction': action.description }];
       return todos;
+    case 'ADD_TODO':
+      console.log(state);
+      console.log(action)
+      let aux = state.concat({ 'descripction': action.description })
+      return aux;
     default:
       return state;
   }

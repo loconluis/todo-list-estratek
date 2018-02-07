@@ -5,7 +5,7 @@ import { addToDone } from '../actions'
 
 const TodoList = (props) => {
   return (
-    <div>
+    <div className="list-area">
       <ul>
         {
           props.todos.map((todo, i) => 

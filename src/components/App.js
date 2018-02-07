@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import AddNew from './AddNew';
 import TodoList from './TodoList';
 import DoneList from './DoneList';
 import '../styles/App.css';
@@ -16,10 +17,15 @@ class App extends Component {
         </header>
         <div className="container">
           <div className="row">
-            <div className="col">
+            <div className="col add-new">
+              <AddNew />
+            </div>
+          </div>
+          <div className="row">
+            <div className="col col-12 col-sm-12 col-md-6 col-lg-6">
               <TodoList />
             </div>
-            <div className="col">
+            <div className="col col-12 col-sm-12 col-md-6 col-lg-6">
               <DoneList />
             </div>
           </div>

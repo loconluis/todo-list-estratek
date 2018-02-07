@@ -5,7 +5,7 @@ import { removeToDone } from '../actions'
 
 const DoneList = (props) => {
   return (
-    <div>
+    <div className="list-area">
       <ul className="list-group">
       {
         props.dones.length === 0 ? '' : props.dones.map(done => (

@@ -1,13 +1,22 @@
 .title {
-  margin: 20px;
-  padding-bottom: 25px;
+  margin-top: 20px;
   text-decoration: underline;
   font-weight: bold;
+}
+.add-new {
+  margin-right: 15px;
+  margin-left: 40px;
 }
 
 .list-flex {
   display: flex;
   justify-content: space-between;
+}
+
+.list-area {
+  height: 450px;
+  overflow: scroll;
+  overflow-x: hidden;
 }
 
 footer {
@@ -19,6 +28,9 @@ footer p {
   font-size: 15px;
 }
 
+.error-label {
+  color: red;
+}
 .fa-code {
   color: darkgrey;
 }
